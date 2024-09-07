@@ -7,10 +7,27 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const josefinSans = localFont({
+  src: [
+    {
+      path: './fonts/josefin/JosefinSans-Regular.ttf',
+      weight: '400',
+    },
+    {
+      path: './fonts/josefin/JosefinSans-Medium.ttf',
+      weight: '500',
+    },
+    {
+      path: './fonts/josefin/JosefinSans-SemiBold.ttf',
+      weight: '600',
+    },
+    {
+      path: './fonts/josefin/JosefinSans-Bold.ttf',
+      weight: '700',
+    },
+  ],
+  variable: "--font-josefin-sans",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${josefinSans.variable} antialiased`}
       >
         {children}
       </body>
