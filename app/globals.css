@@ -63,4 +63,8 @@ p {
   .text-label {
     @apply text-lg text-background font-josefin text-balance text-center;
   }
+
+  .card-embla {
+    @apply min-w-full h-full pl-5 lg:p-8 lg:pl-5;
+  }
 }

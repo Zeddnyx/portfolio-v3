@@ -1,41 +1,69 @@
+"use client";
+import { useState } from "react";
+
 import About from "@/components/module/home/about";
 import Card from "@/components/module/home/card";
 import ImageCenter from "@/components/module/home/image-center";
 import Me from "@/components/module/home/me";
 import Project from "@/components/module/home/project";
 import ProjectCard from "@/components/module/home/project-card";
+import SocialMedia from "@/components/module/home/social-media";
 import ViewMore from "@/components/module/home/view-more";
 import Work from "@/components/module/home/work";
+import WorkCard from "@/components/module/home/work-card";
+import DotBounce from "@/components/module/home/dot-bounce";
+import { useWindowSize } from "@/hooks";
 
 export default function Home() {
+  const [isClick, setIsClick] = useState(false);
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+
   return (
     <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-3 gap-2 p-2 bg-background relative">
-      <Card end="topLeft" delay={1}>
+      <Card end={isMobile ? "top" : "topLeft"} delay={1} className="order-1">
         <Me />
       </Card>
-      <ImageCenter className="md:hidden" />
-      <Card end="top" delay={1.3}>
+      <Card end="top" delay={1.3} className="order-2">
         <About />
       </Card>
-      <Card end="topRight" delay={1.6}>
+      <Card
+        end={isMobile ? "bottomRight" : "topRight"}
+        delay={1.6}
+        className="order-7 md:order-5 lg:order-4"
+      >
         <Project />
       </Card>
-      <Card end="centerLeft" delay={3}>
+      <Card
+        end="centerLeft"
+        delay={3}
+        className="order-4 md:order-4 lg:order-5"
+      >
         <Work />
       </Card>
-      <div className="absolute size-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-        <div className="bg-primary animate-bounce-scale size-20 rounded-full" />
-      </div>
-      <ImageCenter className="hidden md:block md:col-span-2 lg:col-span-1" />
-      <Card end="centerRight" delay={1.9}>
+      <DotBounce />
+      <ImageCenter
+        className={`${isClick && "!z-[5]"} order-3 md:order-3 lg:order-5`}
+      />
+      <Card
+        end="centerRight"
+        delay={1.9}
+        className="order-7 md:order-7 lg:order-7"
+      >
         <ProjectCard />
       </Card>
-      <Card end="bottomLeft" delay={2.8} />
-      <Card end="bottomCenter" delay={2.5}>
-        <Me />
+      <Card
+        end="bottomLeft"
+        delay={2.8}
+        className="order-5 md:order-6 lg:order-7"
+      >
+        <WorkCard />
       </Card>
-      <Card end="bottomRight" delay={2.2} className="fixed z-20">
-        <ViewMore />
+      <Card end="bottomCenter" delay={2.5} className="order-9 md:order-8">
+        <SocialMedia />
+      </Card>
+      <Card end="bottomRight" delay={2.2} className="order-8 md:order-9">
+        <ViewMore isClick={isClick} setIsClick={setIsClick} />
       </Card>
     </div>
   );

@@ -6,23 +6,23 @@ import useEmblaCarousel from "embla-carousel-react";
 import style from "@/styles/embla.module.css";
 
 type PropType = {
-  slides: number[];
   options?: EmblaOptionsType;
+  children: React.ReactNode;
 };
 
-export default function Embla({ props }: { props: PropType }) {
-  const { slides = [1, 2], options } = props;
-  const [emblaRef] = useEmblaCarousel(options, [Autoplay()]);
+export default function Embla({ options, children }: PropType) {
+  const [emblaRef] = useEmblaCarousel(options, [Autoplay({delay: 8000})]);
 
   return (
     <section className={style.embla}>
       <div className={style.embla__viewport} ref={emblaRef}>
         <div className={style.embla__container}>
-          {slides.map((index) => (
-            <div className={style.embla__slide} key={index}>
-              <div className={style.embla__slide__number}>{index + 1}</div>
-            </div>
-          ))}
+          {children}
+          {/* {slides.map((index) => ( */}
+          {/*   <div className={style.embla__slide} key={index}> */}
+          {/*     <div className={style.embla__slide__number}>{children}</div> */}
+          {/*   </div> */}
+          {/* ))} */}
         </div>
       </div>
     </section>

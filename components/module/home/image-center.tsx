@@ -7,10 +7,15 @@ export default function ImageCenter({ className }: { className?: string }) {
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 1, delay: 0.3 }}
-      className={`${className} relative z-[6] h-80 md:h-72 lg:h-full`}
+      transition={{ duration: 1 }}
+      className={`${className} relative z-[6] h-80 md:h-96 lg:h-full md:col-span-2 lg:col-span-1 `}
     >
-      <Image src="/sunset.jpg" alt="zedd" fill className="rounded-xl" />
+      <Image
+        src="/sunset.jpg"
+        alt="zedd"
+        fill
+        className="rounded-xl object-cover"
+      />
     </motion.div>
   );
 }
