@@ -26,7 +26,7 @@ const config: Config = {
       },
     },
     animation: {
-      "bounce-scale": "bounce-scale 1.5s ease-in-out forwards",
+      "bounce-scale": "bounce-scale 1.8s ease-in-out forwards",
     },
   },
   plugins: [],

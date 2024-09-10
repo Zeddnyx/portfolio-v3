@@ -22,13 +22,13 @@ export default function ViewMore({ isClick, setIsClick }: any) {
         borderRadius: "0",
       }}
       initial={false}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       layout
     >
       {isClick ? (
         <div className="h-full ">
           <FaArrowsToCircle
-            className="text-3xl text-background fixed bottom-10 right-10 hover:scale-90 c_transitions cursor-pointer"
+            className="text-3xl text-background fixed bottom-5 right-5 md:bottom-10 md:right-10 hover:scale-90 c_transitions cursor-pointer"
             onClick={() => setIsClick(!isClick)}
           />
         </div>

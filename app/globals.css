@@ -67,4 +67,12 @@ p {
   .card-embla {
     @apply min-w-full h-full pl-5 lg:p-8 lg:pl-5;
   }
+
+  .dimmed {
+    opacity: 0.5;
+  }
+
+  .tag {
+    @apply bg-background text-primary p-0.5 px-2 rounded-full w-fit font-sans font-semibold;
+  }
 }

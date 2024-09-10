@@ -78,7 +78,7 @@ export const PROJECT = [
   },
   {
     title: "Oxinos",
-    description: "A company website of Oxinos.",
+    description: "Company website of Oxinos.",
     client: "Oxinos",
     stack: ["Nextjs14", "Typescript", "Tailwindcss", "Tanstack RQ"],
     website: "https://oxinos.io",
@@ -86,7 +86,7 @@ export const PROJECT = [
   },
   {
     title: "AMPM.creativelab",
-    description: "Portfolio of AMPM.creativelab.",
+    description: "Company website of AMPM.creativelab.",
     client: "AMPM.creativelab",
     stack: ["Nextjs14", "Typescript", "Tailwindcss"],
     website: "ampm.oxinos.io",

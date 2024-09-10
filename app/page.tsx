@@ -12,43 +12,42 @@ import ViewMore from "@/components/module/home/view-more";
 import Work from "@/components/module/home/work";
 import WorkCard from "@/components/module/home/work-card";
 import DotBounce from "@/components/module/home/dot-bounce";
-import { useWindowSize } from "@/hooks";
 
 export default function Home() {
   const [isClick, setIsClick] = useState(false);
-  const { width } = useWindowSize();
-  const isMobile = width < 768;
 
   return (
-    <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-3 gap-2 p-2 bg-background relative">
-      <Card end={isMobile ? "top" : "topLeft"} delay={1} className="order-1">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-3 gap-2 p-2 bg-background relative c_transitions">
+      <Card end={"topLeft"} delay={1} className="order-1">
         <Me />
       </Card>
-      <Card end="top" delay={1.3} className="order-2">
+      <Card end="top" delay={1.3} className="order-3 md:order-2">
         <About />
       </Card>
       <Card
-        end={isMobile ? "bottomRight" : "topRight"}
+        end={"topRight"}
         delay={1.6}
         className="order-7 md:order-5 lg:order-4"
+        id="project"
       >
         <Project />
       </Card>
       <Card
         end="centerLeft"
-        delay={3}
+        delay={3.1}
         className="order-4 md:order-4 lg:order-5"
       >
         <Work />
       </Card>
       <DotBounce />
       <ImageCenter
-        className={`${isClick && "!z-[5]"} order-3 md:order-3 lg:order-5`}
+        className={`${isClick && "!z-[5]"} order-2 md:order-3 lg:order-5`}
       />
       <Card
         end="centerRight"
         delay={1.9}
         className="order-7 md:order-7 lg:order-7"
+        id="project"
       >
         <ProjectCard />
       </Card>
@@ -62,7 +61,12 @@ export default function Home() {
       <Card end="bottomCenter" delay={2.5} className="order-9 md:order-8">
         <SocialMedia />
       </Card>
-      <Card end="bottomRight" delay={2.2} className="order-8 md:order-9">
+      <Card
+        end="bottomRight"
+        delay={2.2}
+        className="order-8 md:order-9"
+        id="project"
+      >
         <ViewMore isClick={isClick} setIsClick={setIsClick} />
       </Card>
     </div>
