@@ -1,6 +1,3 @@
-"use client";
-import { useState } from "react";
-
 import About from "@/components/module/home/about";
 import Card from "@/components/module/home/card";
 import ImageCenter from "@/components/module/home/image-center";
@@ -14,8 +11,6 @@ import WorkCard from "@/components/module/home/work-card";
 import DotBounce from "@/components/module/home/dot-bounce";
 
 export default function Home() {
-  const [isClick, setIsClick] = useState(false);
-
   return (
     <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-3 gap-2 p-2 bg-background relative c_transitions">
       <Card end={"topLeft"} delay={1} className="order-1">
@@ -40,9 +35,7 @@ export default function Home() {
         <Work />
       </Card>
       <DotBounce />
-      <ImageCenter
-        className={`${isClick && "!z-[5]"} order-2 md:order-3 lg:order-5`}
-      />
+      <ImageCenter className={`order-2 md:order-3 lg:order-5`} />
       <Card
         end="centerRight"
         delay={1.9}
@@ -67,7 +60,7 @@ export default function Home() {
         className="order-8 md:order-9"
         id="project"
       >
-        <ViewMore isClick={isClick} setIsClick={setIsClick} />
+        <ViewMore />
       </Card>
     </div>
   );

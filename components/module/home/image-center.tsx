@@ -17,9 +17,10 @@ export default function ImageCenter({ className }: { className?: string }) {
       >
         <Image
           src="/sunset.jpg"
-          alt="zedd"
-          fill
+          alt="jaenudin portfolio"
+          title="jaenudin portfolio"
           className="rounded-xl object-cover"
+          fill
         />
       </motion.div>
     </motion.div>

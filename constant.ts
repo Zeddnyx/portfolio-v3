@@ -26,6 +26,7 @@ export const EXPERIENCE = [
     company: "PT. Gebra Kreativa Global",
     date: "2023 - Present",
     website: "https://oxinos.io/",
+    thumbnail: "/sunset.jpg",
     tags: [
       "Nextjs",
       "Typescript",

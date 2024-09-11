@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   title: "Jaenudin Portfolio",
   description:
     "Frontend Developer. Focused on performance-driven, user-friendly interfaces. Passionate about coding efficiently with Neovim.",
+  category:
+    "Portfolio, Jaenudin, Frontend, Neovim, TypeScript, Tailwindcss, Nextjs",
   alternates: {
     canonical: DOMAIN,
   },

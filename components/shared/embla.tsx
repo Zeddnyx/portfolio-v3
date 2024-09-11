@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./embla-dot";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import style from "@/styles/embla.module.css";
@@ -11,7 +12,11 @@ type PropType = {
 };
 
 export default function Embla({ options, children }: PropType) {
-  const [emblaRef] = useEmblaCarousel(options, [Autoplay({delay: 8000})]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ delay: 8000 }),
+  ]);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
   return (
     <section className={style.embla}>
@@ -24,6 +29,17 @@ export default function Embla({ options, children }: PropType) {
           {/*   </div> */}
           {/* ))} */}
         </div>
+      </div>
+      <div className={style.embla__dots}>
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            className={`${style.embla__dot
+              } !size-3 rounded-xl hover:!bg-background c_transitions ${index === selectedIndex ? "!bg-background" : "!bg-gray-400"
+              }`}
+          />
+        ))}
       </div>
     </section>
   );
