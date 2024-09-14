@@ -66,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${josefinSans.variable} antialiased`}
+        className={`${geistSans.variable} ${josefinSans.variable} antialiased  no-scrollbar`}
       >
         {children}
       </body>

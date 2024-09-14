@@ -6,6 +6,9 @@
   --background: #ebe6e0;
   --foreground: #0b1215;
   --primary: #4c7766;
+  --red: #ff5f68;
+  --yellow: #ffe75f;
+  --blue: #5f8fff;
 }
 
 /* @media (prefers-color-scheme: dark) { */
@@ -73,7 +76,7 @@ p {
   }
 
   .tag {
-    @apply bg-background text-primary p-0.5 px-2 rounded-full w-fit font-sans font-semibold;
+    @apply bg-background text-primary p-0.5 px-2 rounded-full w-fit font-sans font-bold text-sm 2xl:text-base;
   }
 
   .no-scrollbar::-webkit-scrollbar {

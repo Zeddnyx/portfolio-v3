@@ -5,14 +5,14 @@ import Me from "@/components/module/home/me";
 import Project from "@/components/module/home/project";
 import ProjectCard from "@/components/module/home/project-card";
 import SocialMedia from "@/components/module/home/social-media";
-import ViewMore from "@/components/module/home/view-more";
 import Work from "@/components/module/home/work";
 import WorkCard from "@/components/module/home/work-card";
 import DotBounce from "@/components/module/home/dot-bounce";
+import Skills from "@/components/module/home/skills";
 
 export default function Home() {
   return (
-    <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-3 gap-2 p-2 bg-background relative c_transitions">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 bg-background relative">
       <Card end={"topLeft"} delay={1} className="order-1">
         <Me />
       </Card>
@@ -60,7 +60,7 @@ export default function Home() {
         className="order-8 md:order-9"
         id="project"
       >
-        <ViewMore />
+        <Skills />
       </Card>
     </div>
   );

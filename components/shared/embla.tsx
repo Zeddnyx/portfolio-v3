@@ -36,7 +36,7 @@ export default function Embla({ options, children }: PropType) {
             key={index}
             onClick={() => onDotButtonClick(index)}
             className={`${style.embla__dot
-              } !size-3 rounded-xl hover:!bg-background c_transitions ${index === selectedIndex ? "!bg-background" : "!bg-gray-400"
+              } !size-2 2xl:!size-3 rounded-xl hover:!bg-background c_transitions !bg-background ${index !== selectedIndex && "opacity-30"
               }`}
           />
         ))}

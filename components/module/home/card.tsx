@@ -1,4 +1,5 @@
 "use client";
+import { useWindowSize } from "@/hooks";
 import { motion } from "framer-motion";
 
 const ends = {
@@ -27,14 +28,17 @@ export default function Card({
   children,
   id,
 }: CardProps) {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
   const endValues = ends[end] || ends.topLeft;
+  const position = isMobile ? ends.top : endValues;
   return (
     <motion.div
       id={id}
-      className={`${className} w-full h-80 md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary `}
-      initial={{ scale: 0, x: endValues.x, y: endValues.y }}
+      className={`${className} w-full xxs:h-80 h-full md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary `}
+      initial={{ scale: 0, x: position.x, y: position.y }}
       animate={{ scale: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8, delay }}
+      transition={{ duration: 0.8, delay: isMobile ? 1.2 : delay }}
     >
       {children}
     </motion.div>

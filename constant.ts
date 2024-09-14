@@ -111,7 +111,7 @@ export const PROJECT = [
   {
     title: "Odigital",
     description:
-      "A premier destination for buying and selling digital assets! Whether you're a talented designer, a skilled developer, or an ambitious entrepreneur, Odigital provides a dynamic platform where you can showcase your creations and discover inspiration.",
+      "Odigital is your go-to platform for buying and selling digital assets. Whether you're a designer, developer, or entrepreneur, showcase your work and find inspiration here!",
     client: "Oxinos",
     stack: ["Nextjs14", "Typescript", "zustand", "Tailwindcss", "Tanstack RQ"],
     website: null,
@@ -120,7 +120,7 @@ export const PROJECT = [
   {
     title: "Profilix",
     description:
-      "An advanced web application that enables users to create and manage their profiles. With Profilix, users can create professional portfolios, showcase their skills, and connect with potential clients.",
+      "Profilix is a powerful web app for creating and managing profiles. Build professional portfolios, showcase your skills, and connect with clients.",
     client: "Oxinos",
     stack: ["Nextjs14", "Typescript", "Tanstack React Query", "Tailwindcss"],
     website: null,
@@ -129,7 +129,7 @@ export const PROJECT = [
   {
     title: "SALIRA",
     description:
-      "Innovative web portal designed to foster literacy and engagement at the provincial level. Developed for provincial administrations, this platform enables administrators to create, share, and interact with articles, promoting a culture of learning and collaboration.",
+      "A web portal for provincial administrations to promote literacy and collaboration through creating, sharing, and engaging with articles",
     client: "Dispusipda",
     stack: ["Nextjs14", "Typescript", "Redux", "Tailwindcss"],
     website: "dispusipda.my.id",
@@ -144,4 +144,17 @@ export const PROJECT = [
     website: null,
     year: 2024,
   },
+];
+
+export const SKILLS = [
+  "Neovim",
+  "Linux",
+  "Nextjs14",
+  "React",
+  "Typescript",
+  "Tailwindcss",
+  "Redux",
+  "Zustand",
+  "Tanstack RQ",
+  "Socket.io",
 ];

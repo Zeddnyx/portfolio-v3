@@ -19,18 +19,6 @@ export default function WorkCard() {
               <h3>{item.company}</h3>
               <FaLink className="opacity-0 group-hover:opacity-100 c_transitions text-background" />
             </Link>
-            <div className="pt-4 flex gap-2 items-center flex-wrap">
-              {item.tags.map((item, id) => {
-                return (
-                  <p
-                    className="text-sm md:text-base font-medium bg-background text-primary p-1 px-2 rounded-full"
-                    key={id}
-                  >
-                    {item}
-                  </p>
-                );
-              })}
-            </div>
           </div>
         );
       })}
