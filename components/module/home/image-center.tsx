@@ -18,7 +18,6 @@ export default function ImageCenter({ className }: { className?: string }) {
         <Image
           src="/sunset.jpg"
           alt="jaenudin portfolio"
-          title="jaenudin portfolio"
           className="rounded-xl object-cover"
           fill
         />
