@@ -13,15 +13,15 @@ import Skills from "@/components/module/home/skills";
 export default function Home() {
   return (
     <div className="h-dvh grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 bg-background relative">
-      <Card end={"topLeft"} delay={1} className="order-1">
+      <Card end={"topLeft"} delay={1.7} className="order-1">
         <Me />
       </Card>
-      <Card end="top" delay={1.3} className="order-3 md:order-2">
+      <Card end="top" delay={2} className="order-3 md:order-2">
         <About />
       </Card>
       <Card
         end={"topRight"}
-        delay={1.6}
+        delay={2.3}
         className="order-4 md:order-5 lg:order-4"
         id="project"
       >
@@ -29,7 +29,7 @@ export default function Home() {
       </Card>
       <Card
         end="centerLeft"
-        delay={3.1}
+        delay={3.8}
         className="order-7 md:order-4 lg:order-5"
       >
         <Work />
@@ -38,7 +38,7 @@ export default function Home() {
       <ImageCenter className={`order-2 md:order-3 lg:order-5`} />
       <Card
         end="centerRight"
-        delay={1.9}
+        delay={2.6}
         className="order-5 md:order-7 lg:order-7"
         id="project"
       >
@@ -46,17 +46,17 @@ export default function Home() {
       </Card>
       <Card
         end="bottomLeft"
-        delay={2.8}
+        delay={3.5}
         className="order-7 md:order-6 lg:order-7"
       >
         <WorkCard />
       </Card>
-      <Card end="bottomCenter" delay={2.5} className="order-9 md:order-8">
+      <Card end="bottomCenter" delay={3.2} className="order-9 md:order-8">
         <SocialMedia />
       </Card>
       <Card
         end="bottomRight"
-        delay={2.2}
+        delay={2.9}
         className="order-8 md:order-9"
         id="project"
       >

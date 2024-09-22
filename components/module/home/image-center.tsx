@@ -13,7 +13,7 @@ export default function ImageCenter({ className }: { className?: string }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
       >
         <Image
           src="/sunset.jpg"
