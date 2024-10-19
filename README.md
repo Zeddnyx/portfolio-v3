@@ -1,3 +1,4 @@
 # TODO
-- add image blur and load
-- style card on view more project
+- add real image
+- add real description
+- deploy
