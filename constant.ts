@@ -69,9 +69,18 @@ export const PROJECT = [
     year: 2024,
   },
   {
-    title: "Orderia Kios",
+    title: "Orderia Kiosk",
     description:
       "Orderia Kios is an online ordering platform. It offers a wide range of food and drink items for restaurants.",
+    client: "Oxinos",
+    stack: ["Nextjs14", "Typescript", "Tailwindcss", "Tanstack RQ"],
+    website: null,
+    year: 2024,
+  },
+  {
+    title: "Orderia POS",
+    description:
+      "Orderia POS offers a convenient and efficient way to manage restaurant sales",
     client: "Oxinos",
     stack: ["Nextjs14", "Typescript", "Tailwindcss", "Tanstack RQ"],
     website: null,
@@ -144,17 +153,28 @@ export const PROJECT = [
     website: null,
     year: 2024,
   },
+  {
+    title: "PlayPedia",
+    description:
+      "Landing page for sport activity (rent a court, open play, sparring)",
+    client: "PlayPedia",
+    stack: ["Nextjs14", "Typescript", "Tanstack React Query", "Tailwindcss"],
+    website: null,
+    year: 2024,
+  },
 ];
 
 export const SKILLS = [
   "Neovim",
   "Linux",
-  "Nextjs14",
+  "NextJS",
   "React",
   "Typescript",
   "Tailwindcss",
   "Redux",
   "Zustand",
   "Tanstack RQ",
+  "Frammer Motion",
   "Socket.io",
+  "Husky",
 ];

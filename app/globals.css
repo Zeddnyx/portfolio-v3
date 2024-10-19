@@ -11,12 +11,12 @@
   --blue: #5f8fff;
 }
 
-/* @media (prefers-color-scheme: dark) { */
-/*   :root { */
-/*     --background: #0b1215; */
-/*     --foreground: #ededed; */
-/*   } */
-/* } */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1215;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -82,5 +82,4 @@ p {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
 }
