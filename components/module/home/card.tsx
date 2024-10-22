@@ -1,4 +1,5 @@
 "use client";
+import { useWindowSize } from "@/hooks";
 import { motion } from "framer-motion";
 
 const ends = {
@@ -27,14 +28,14 @@ export default function Card({
   children,
   id,
 }: CardProps) {
-  const initital = ends[end];
+  const initital= ends[end];
   return (
     <motion.div
       id={id}
       className={`${className} w-full xxs:h-80 h-full md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary `}
       initial={{ scale: 0, x: initital.x, y: initital.y }}
       animate={{ scale: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8, delay }}
+      transition={{ duration: 0.8, delay}}
     >
       {children}
     </motion.div>
