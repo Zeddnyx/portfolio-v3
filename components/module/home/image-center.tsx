@@ -1,6 +1,7 @@
 "use client";
+import CImage from "@/components/shared/c-image";
+import { ImgProfile } from "@/constant";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function ImageCenter({ className }: { className?: string }) {
   return (
@@ -15,8 +16,8 @@ export default function ImageCenter({ className }: { className?: string }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <Image
-          src="/sunset.jpg"
+        <CImage
+          src={ImgProfile}
           alt="jaenudin portfolio"
           className="rounded-xl object-cover"
           fill

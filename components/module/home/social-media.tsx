@@ -7,7 +7,7 @@ export default function SocialMedia() {
       <div className="h-full flex justify-center items-center gap-10">
         {SOCIAL_MEDIA.map((item, id) => {
           return (
-            <Link href={item.href} rel="noreferrer" key={id}>
+            <Link href={item.href} rel="noreferrer" key={id} title={item.title}>
               <item.icon size={30} className="text-background" />
             </Link>
           );

@@ -1,20 +1,26 @@
 import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
+export { default as ImgProfile } from "@images/photos/sunset.jpg";
+
 export const SOCIAL_MEDIA = [
   {
+    title: "Github",
     href: "https://github.com/Zeddnyx",
     icon: FaGithub,
   },
   {
+    title: "Linkedin",
     href: "http://www.linkedin.com/in/jaenudin-jee-650482199",
     icon: FaLinkedin,
   },
   {
+    title: "Email",
     href: "mailto:jee.nvim@gmail.com",
     icon: IoMdMail,
   },
   {
+    title: "Telegram",
     href: "https://t.me/jee_vim",
     icon: FaTelegramPlane,
   },
@@ -25,7 +31,7 @@ export const EXPERIENCE = [
     title: "Frontend Developer",
     company: "PT. Gebra Kreativa Global",
     date: "2023 - Present",
-    type: 'Fulltime',
+    type: "Fulltime",
     website: "https://oxinos.io/",
     thumbnail: "/sunset.jpg",
     tags: [
@@ -44,7 +50,7 @@ export const EXPERIENCE = [
     title: "Internship Frontend Developer",
     company: "TemanTrip",
     date: "2023 - 2023",
-    type: 'Internship',
+    type: "Internship",
     website: null,
     tags: ["React", "Javascript", "Typescript", "Tailwindcss"],
     description:
