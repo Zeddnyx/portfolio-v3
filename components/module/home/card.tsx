@@ -1,5 +1,4 @@
 "use client";
-import { useWindowSize } from "@/hooks";
 import { motion } from "framer-motion";
 
 const ends = {

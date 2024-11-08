@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function SocialMedia() {
   return (
     <div className="flex flex-col gap-2 justify-center h-full">
-      <div className="h-full flex justify-center items-center gap-5">
+      <div className="h-full flex justify-center items-center gap-10">
         {SOCIAL_MEDIA.map((item, id) => {
           return (
             <Link href={item.href} rel="noreferrer" key={id}>
@@ -13,7 +13,7 @@ export default function SocialMedia() {
           );
         })}
       </div>
-      <p className="text-center font-sans text-sm">
+      <p className="text-center font-mono font-semibold text-sm">
         © {new Date().getFullYear()} Jaenudin. All Rights Reserved.
       </p>
     </div>

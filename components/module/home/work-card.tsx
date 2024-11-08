@@ -15,7 +15,10 @@ export default function WorkCard() {
             key={id}
             className="card-embla flex flex-col gap-2 group "
           >
-            <p className="tag">{item.date}</p>
+            <span className="flex items-center gap-3">
+              <p className="tag">{item.date}</p>
+              <p className="tag">{item.type}</p>
+            </span>
             <div className="flex items-center gap-2">
               <h3>{item.company}</h3>
               <FaLink className="opacity-0 group-hover:opacity-100 c_transitions text-background" />

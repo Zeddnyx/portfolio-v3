@@ -7,15 +7,15 @@ export const SOCIAL_MEDIA = [
     icon: FaGithub,
   },
   {
-    href: "http://www.linkedin.com/in/jaenudin-z-650482199",
+    href: "http://www.linkedin.com/in/jaenudin-jee-650482199",
     icon: FaLinkedin,
   },
   {
-    href: "mailto:zeddnyx08@gmail.com",
+    href: "mailto:jee.nvim@gmail.com",
     icon: IoMdMail,
   },
   {
-    href: "https://t.me/Zeddnyx",
+    href: "https://t.me/jee_vim",
     icon: FaTelegramPlane,
   },
 ];
@@ -25,6 +25,7 @@ export const EXPERIENCE = [
     title: "Frontend Developer",
     company: "PT. Gebra Kreativa Global",
     date: "2023 - Present",
+    type: 'Fulltime',
     website: "https://oxinos.io/",
     thumbnail: "/sunset.jpg",
     tags: [
@@ -40,18 +41,10 @@ export const EXPERIENCE = [
       "As a dedicated web developer, I play a vital role in client-facing projects and internal product development. Leveraging my skills, I successfully create and maintain dynamic websites, ensuring a seamless and engaging user experience. I actively contribute to internal product development, aligning them with organizational goals and fostering innovation within the team. My commitment to excellence is reflected in delivering high-quality solutions that meet both client expectations and internal requirements.",
   },
   {
-    title: "Frontend Developer",
-    company: "Deborahtech",
-    date: "2023 - 2024",
-    website: "#",
-    tags: ["React", "Typescript", "Tailwindcss"],
-    description:
-      "As a freelance developer at DeborahTech, I collaborated on diverse projects, delivering high-quality solutions tailored to clients' unique needs. Engaging with cutting-edge technologies honed my technical expertise. Thriving in an innovative environment at DeborahTech expanded my professional horizons, solidifying my commitment to top-notch software solutions.",
-  },
-  {
     title: "Internship Frontend Developer",
     company: "TemanTrip",
     date: "2023 - 2023",
+    type: 'Internship',
     website: null,
     tags: ["React", "Javascript", "Typescript", "Tailwindcss"],
     description:

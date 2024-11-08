@@ -33,6 +33,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
         josefin: ["var(--font-josefin-sans)", "sans-serif"],
       },
     },
