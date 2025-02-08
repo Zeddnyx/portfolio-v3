@@ -61,6 +61,16 @@ p {
     text-wrap: balance;
   }
 
+  .dimmed {
+    opacity: 0.5;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
   .c_transitions {
     @apply transition-all duration-300 ease-in-out;
   }
@@ -70,24 +80,33 @@ p {
   }
 
   .card-embla {
-    @apply min-w-full h-full pl-5 lg:p-8 lg:pl-5;
+    @apply min-w-full h-full pl-5 lg:p-8 lg:pl-5 select-none flex flex-col gap-2;
   }
 
-  .dimmed {
-    opacity: 0.5;
-  }
-
+  .card-embla p,
   .tag {
     @apply bg-background text-primary p-0.5 px-2 rounded-full w-fit font-mono font-bold text-sm 2xl:text-base;
   }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  .card-embla div {
+    @apply flex items-center gap-2;
   }
+  .card-embla svg {
+    @apply opacity-0 c_transitions text-background;
+  }
+
+  .parent {
+    @apply h-dvh grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 bg-background relative;
+  }
+  .card {
+    @apply w-full xxs:h-80 h-full md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary;
+  }
+  /* .card:nth-child(3):hover ~ .card:not(:nth-child(5)) { */
+  /*   @apply !opacity-50 c_transitions; */
+  /* } */
 }
 
+/* Wave animation */
 @keyframes wave {
-
   0%,
   100% {
     transform: translateX(-100%);
@@ -99,21 +118,49 @@ p {
 }
 
 .wave {
-  overflow: hidden;
-  position: relative;
+  @apply overflow-hidden relative;
 }
 
 .wave::after {
+  @apply block absolute top-0 left-0 size-full;
   content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent);
   animation: wave 1.4s infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+/* End Wave animation */
+
+@keyframes upside-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-upside-down:hover .item {
+  animation: upside-down 0.6s ease-in-out both;
+}
+.animate-upside-down:hover .item:nth-child(1) {
+  animation-delay: 0s;
+}
+.animate-upside-down:hover .item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.animate-upside-down:hover .item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.animate-upside-down:hover .item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.animate-upside-down:hover .item:nth-child(5) {
+  animation-delay: 0.4s;
 }

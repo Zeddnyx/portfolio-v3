@@ -18,7 +18,6 @@ const cardData = [
     end: "topRight",
     delay: 2.3,
     order: "order-4 md:order-5 lg:order-4",
-    id: "project",
   },
   {
     component: <Work />,
@@ -31,7 +30,6 @@ const cardData = [
     end: "centerRight",
     delay: 2.6,
     order: "order-5 md:order-7 lg:order-7",
-    id: "project",
   },
   {
     component: <WorkCard />,
@@ -50,20 +48,18 @@ const cardData = [
     end: "bottomRight",
     delay: 2.9,
     order: "order-8 md:order-9",
-    id: "project",
   },
 ];
 
 export default function Page() {
   return (
-    <div className="h-dvh grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 bg-background relative">
-      {cardData.map(({ component, end, delay, order, id }, index) => (
+    <div className="parent">
+      {cardData.map(({ component, end, delay, order }, index) => (
         <Card
           key={index}
           end={end as ICard["end"]}
           delay={delay}
           className={order}
-          id={id}
         >
           {component}
         </Card>

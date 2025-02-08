@@ -3,11 +3,17 @@ import Link from "next/link";
 
 export default function SocialMedia() {
   return (
-    <div className="flex flex-col gap-2 justify-center h-full">
+    <div className="flex flex-col gap-2 justify-center h-full animate-upside-down">
       <div className="h-full flex justify-center items-center gap-10">
         {SOCIAL_MEDIA.map((item, id) => {
           return (
-            <Link href={item.href} rel="noreferrer" key={id} title={item.title}>
+            <Link
+              href={item.href}
+              rel="noreferrer"
+              key={id}
+              title={item.title}
+              className="item"
+            >
               <item.icon size={30} className="text-background" />
             </Link>
           );

@@ -13,15 +13,15 @@ export default function WorkCard() {
             target="_blank"
             rel="noreferrer"
             key={id}
-            className="card-embla flex flex-col gap-2 group "
+            className="card-embla group "
           >
             <span className="flex items-center gap-3">
-              <p className="tag">{item.date}</p>
-              <p className="tag">{item.type}</p>
+              <p>{item.date}</p>
+              <p>{item.type}</p>
             </span>
-            <div className="flex items-center gap-2">
+            <div>
               <h3>{item.company}</h3>
-              <FaLink className="opacity-0 group-hover:opacity-100 c_transitions text-background" />
+              <FaLink className="group-hover:opacity-100" />
             </div>
           </Link>
         );
