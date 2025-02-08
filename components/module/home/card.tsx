@@ -10,31 +10,32 @@ const ends = {
   bottomLeft: { x: "100%", y: "-100%" },
   bottomCenter: { x: "0%", y: "-100%" },
   bottomRight: { x: "-100%", y: "-100%" },
-};
+} as const;
 
-interface CardProps {
+export interface ICard {
   className?: string;
   delay: number;
   end: keyof typeof ends;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   id?: string;
 }
 
 export default function Card({
-  className,
+  className = "",
   delay,
   end,
   children,
   id,
-}: CardProps) {
-  const initital= ends[end];
+}: ICard) {
+  const initial = ends[end];
+
   return (
     <motion.div
       id={id}
-      className={`${className} w-full xxs:h-80 h-full md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary `}
-      initial={{ scale: 0, x: initital.x, y: initital.y }}
+      className={`${className} w-full xxs:h-80 h-full md:h-72 lg:h-full z-[5] relative rounded-xl p-5 bg-primary`}
+      initial={{ scale: 0, x: initial.x, y: initial.y }}
       animate={{ scale: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8, delay}}
+      transition={{ duration: 0.8, delay }}
     >
       {children}
     </motion.div>
